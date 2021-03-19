@@ -13,8 +13,17 @@
 #     name: python3
 # ---
 
-# %%
-# #!pip3 install lightgbm
+# %% [markdown]
+# # Links
+# https://www.youtube.com/watch?v=JvIzB3hULCo
+#
+# https://en.wikipedia.org/wiki/Quantile_regression
+#
+# https://medium.com/analytics-vidhya/prediction-intervals-in-forecasting-quantile-loss-function-18f72501586f
+#
+# - Instacart: https://tech.instacart.com/how-instacart-delivers-on-time-using-quantile-regression-2383e2e03edb
+#
+# - Quantile Regression blog: http://ethen8181.github.io/machine-learning/ab_tests/quantile_regression/quantile_regression.html
 
 # %% [markdown]
 # ### Intuition of Quantile Loss 
@@ -59,11 +68,12 @@ from sklearn.model_selection import train_test_split
 from lightgbm import LGBMRegressor
 
 # %%
-X, y = make_regression(n_samples=10000,
-                n_features=1,
-                n_informative=1,
-                n_targets=1,
-                random_state=42)
+X, y = make_regression(
+    n_samples=10000,
+    n_features=1,
+    n_informative=1,
+    n_targets=1,
+    random_state=42)
 
 Xs = pd.DataFrame(X, columns = ['distance'])
 ys = pd.DataFrame(y, columns = ['time_to_buyer'])
@@ -136,9 +146,3 @@ xlabel = plt.xlabel("Distance (Miles)")
 
 # %%
 (data['time_to_buyer'] > data['0.9']).value_counts()
-
-# %% [markdown]
-# ### Notes
-#
-# - Instacart: https://tech.instacart.com/how-instacart-delivers-on-time-using-quantile-regression-2383e2e03edb
-# - Quantile Regression blog: http://ethen8181.github.io/machine-learning/ab_tests/quantile_regression/quantile_regression.html
