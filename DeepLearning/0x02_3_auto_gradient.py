@@ -2,7 +2,8 @@
 # the actual w is 2
 # [1] start with a random w
 # [2] update w based on gradient (not random guess)
-#
+# - w requires_grad; loss.backward() -> update grad of w
+# - update w
 
 import torch
 
@@ -32,6 +33,7 @@ for epoch in range(10):
         l.backward()  # Back propagation to update weights
         print("\tgrad: ", x_val, y_val, w.grad.item())
         # update w based on grad
+        # this will be replaced with 'optimizer.step()'
         w.data = w.data - 0.01 * w.grad.item()
 
         # Manually zero the gradients after updating weights
