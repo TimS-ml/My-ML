@@ -23,6 +23,9 @@ A collection of code that I found useful or interesting
 https://colab.research.google.com/github/ + repo name
 For example: https://colab.research.google.com/github/rasbt/deeplearning-models
 
-## Activation Functions
-http://rasbt.github.io/mlxtend/user_guide/general_concepts/activation-functions/
-https://dashee87.github.io/data%20science/deep%20learning/visualising-activation-functions-in-neural-networks/
+
+# Deep Leanring
+- https://github.com/hunkim/PyTorchZeroToAll
+
+
+# Machine Learning

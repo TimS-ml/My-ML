@@ -1,4 +1,8 @@
-# Training Data
+# linear model: y = x * w
+# the actual w is 2
+# [1] start with a random w
+# [2] update w based on gradient (not random guess)
+
 x_data = [1.0, 2.0, 3.0]
 y_data = [2.0, 4.0, 6.0]
 
@@ -13,16 +17,19 @@ def forward(x):
 # Loss function
 def loss(x, y):
     y_pred = forward(x)
-    return (y_pred - y) * (y_pred - y)
+    return (y_pred - y) ** 2
 
 
-# compute gradient
-def gradient(x, y):  # d_loss/d_w
+# compute gradient = d_loss/d_w
+# loss = (x * w - y) ** 2
+# https://en.wikipedia.org/wiki/Chain_rule
+def gradient(x, y):
     return 2 * x * (x * w - y)
 
 
+# The actual output should be 8
 # Before training
-print("Prediction (before training)", 4, forward(4))
+print("Prediction (before training), x=4", forward(4))
 
 # Training loop
 for epoch in range(10):
@@ -37,4 +44,4 @@ for epoch in range(10):
     print("progress:", epoch, "w=", round(w, 2), "loss=", round(l, 2))
 
 # After training
-print("Predicted score (after training)", "4 hours of studying: ", forward(4))
+print("Predicted score (after training), x=4", forward(4))

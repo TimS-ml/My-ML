@@ -1,3 +1,8 @@
+# linear model: y = x * w
+# the actual w is 2
+# [1] for every w in range calculate avg loss (more like random guess)
+# [2] pick the one with lowest loss
+
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -5,23 +10,23 @@ x_data = [1.0, 2.0, 3.0]
 y_data = [2.0, 4.0, 6.0]
 
 
-# y = x * w + b, ignore b to simplify mode
 # our model for the forward pass
 def forward(x):
     return x * w
 
 
 # Loss function
+# Mean square Error (MSE)
 def loss(x, y):
     y_pred = forward(x)
-    return (y_pred - y)**2
+    return (y_pred - y) ** 2
 
 
-# List of weights/Mean square Error (Mse) for each input
 w_list = []
 mse_list = []
 
-for w in np.arange(0.0, 4.1, 0.1):  # w is random guess to predit y_pred
+# w is random guess to predit y_pred
+for w in np.arange(0.0, 4.1, 0.1):
     # Print the weights and initialize the lost
     print("w =", w)
     l_sum = 0
@@ -39,7 +44,6 @@ for w in np.arange(0.0, 4.1, 0.1):  # w is random guess to predit y_pred
     w_list.append(w)
     mse_list.append(l_sum / 3)
 
-# Plot it all
 plt.plot(w_list, mse_list)
 plt.ylabel('Loss')
 plt.xlabel('w')
