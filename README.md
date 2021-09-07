@@ -26,6 +26,10 @@ For example: https://colab.research.google.com/github/rasbt/deeplearning-models
 
 # Deep Leanring
 - https://github.com/hunkim/PyTorchZeroToAll
+- https://github.com/d2l-ai/d2l-zh
 
 
 # Machine Learning
+- cs231 and coursera-ml
+- (all in numpy) stat ml method yb hang li
+- 100 page ml book
