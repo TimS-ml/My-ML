@@ -116,7 +116,19 @@ plt.scatter(preds, y_test)
 plt.plot([0, 51], [0, 51])
 
 # %% [markdown] id="QPawIJ2t4KxY"
-# ## Analyzing the Most Important Feature
+# ## [!] Deterine the Most Important Feature
+#
+# p57: a larger coefficient means that the feature is more important
+#
+# The last one (-4.19, index 12) is the most important feature
+#
+
+# %% colab={"base_uri": "https://localhost:8080/"} id="lOkDbArA4Kxa" outputId="e8f5c682-4d9e-43c2-ccf1-3b142d93e983"
+np.round(lr.coef_, 2)
+
+# %% colab={"base_uri": "https://localhost:8080/"} id="fnr-YGsNbpue" outputId="e15b5f19-02e8-455e-880e-cb3b7efb81ea"
+# Preview the last feature
+np.round(X_test[:, 12], 4)
 
 # %% [markdown] id="CI62hpG14KxZ"
 # As you can see this is a non linear relationship. As our "most important" feature increases our target decreases in a nonlinear manner.
@@ -133,9 +145,6 @@ plt.title("Relationship between most\nimportant feature and target")
 # %% colab={"base_uri": "https://localhost:8080/"} id="IMLLMYvj4Kxa" outputId="398b0009-1b1c-4f99-a204-dbf32127a65f"
 print("Mean absolute error: ", round(mae(preds, y_test), 4), "\n"
       "Root mean squared error: ", round(rmse(preds, y_test), 4))
-
-# %% colab={"base_uri": "https://localhost:8080/"} id="lOkDbArA4Kxa" outputId="e8f5c682-4d9e-43c2-ccf1-3b142d93e983"
-np.round(lr.coef_, 2)
 
 # %% [markdown] id="495UXhT54Kxb"
 # # Manual Linear Regression
@@ -436,7 +445,7 @@ np.round(lr.intercept_, 4)
 # The coefficients are the 'same' as in scikit learn and the manual linear regression, although you can see slight discrepancies in the weights, but both have very similiar intercepts. As shown earlier they had almost identical RMSE and MAE, but since the weights are different they are different lines. Similar errors, but 'different' lines can be attributed to the dataset, at least that is what I would conclude.
 
 # %% [markdown] id="eElpNw6K4Kxh"
-# ### Theoretical relationship between most important feature and the target
+# ### [!] Theoretical relationship between most important feature (NO.12) and the target
 
 # %% id="CYPBE3KR4Kxh"
 NUM = 40
@@ -673,7 +682,10 @@ def predict(X: ndarray, weights_nn: Dict[str, ndarray]) -> ndarray:
 if TEST_ALL:
     num_iter = 10000
     test_every = 1000
-    train_info = train(X_train, y_train, X_test, y_test,
+    train_info = train(X_train, 
+                       y_train, 
+                       X_test, 
+                       y_test,
                        n_iter=num_iter,
                        test_every = test_every,
                        learning_rate = 0.001,
@@ -729,7 +741,12 @@ if TEST_ALL:
 
 # %% id="XWnLNFuG4Kxl" colab={"base_uri": "https://localhost:8080/", "height": 822} outputId="ea8489d2-5a17-42dd-bcf1-5e1afbc91c54"
 if TEST_ALL:
+    # Make a plot with log scaling on the x axis
     plt.semilogx(lrs, r2s)
+
+# %% colab={"base_uri": "https://localhost:8080/"} id="ofyseZ_lWMeA" outputId="67e64eab-1a4f-439c-fe92-d62ca8547115"
+min_idx = r2s.index(min(r2s))
+print('Best lr: {}, Minimum loss: {}'.format(lrs[min_idx], min(r2s)))
 
 # %% [markdown] id="O4g_Zck04Kxl"
 # ## Evaluating best model
@@ -739,7 +756,7 @@ train_info_nn = train(X_train,
                       y_train,
                       X_test,
                       y_test,
-                      n_iter=10000,
+                      n_iter=4000,
                       test_every=1000,
                       learning_rate=0.001,
                       batch_size=23,
@@ -750,8 +767,8 @@ train_info_nn = train(X_train,
 losses = train_info_nn[0]
 weights_nn = train_info_nn[1]
 
-# %% colab={"base_uri": "https://localhost:8080/", "height": 832} id="o-P94eC54Kxm" outputId="778bc4f8-1eab-412f-f55d-dc7511bdc9c1"
-plt.plot(list(range(10000)), losses)
+# %% colab={"base_uri": "https://localhost:8080/", "height": 832} id="o-P94eC54Kxm" outputId="be9706c3-5dba-44f3-d502-204dd7921694"
+plt.plot(list(range(4000)), losses)
 
 # %% id="4xehoihw4Kxm"
 preds = predict(X_test, weights_nn)
@@ -766,9 +783,8 @@ weights_nn['W2']
 # %% [markdown] id="fDzCqCim4Kxm"
 # The combinations that fit the criteria above as index 7 and 9
 
-# %% colab={"base_uri": "https://localhost:8080/"} id="i1HLxyzu4Kxm" outputId="691009ed-f950-4a15-d836-92944431023d"
-print("Weights with an abs() of 9.7: \n", weights_nn['W1'][7], "\n")
-print("Weights with an abs() of 10.2: \n", weights_nn['W1'][9])
+# %% colab={"base_uri": "https://localhost:8080/"} id="i1HLxyzu4Kxm" outputId="d6907bf2-01bb-496b-bac7-2160bf0535c3"
+print("Weights example (7th): \n", weights_nn['W1'][7])
 
 # %% colab={"base_uri": "https://localhost:8080/"} id="i_cQQOG_4Kxn" outputId="226d9055-c724-4968-b960-f69c604e1fa9"
 print("Mean abs error: ", round(mae(preds, y_test), 4), "\n"
@@ -790,7 +806,7 @@ np.round(np.mean(np.array(np.abs(preds - y_test))), 4)
 np.round(np.mean(np.array(np.power(preds - y_test, 2))), 4)
 
 # %% [markdown] id="kf7Pr5yU4Kxn"
-# ## Theoretical relationship between most important feature and target
+# ### [!] Theoretical relationship between most important feature (NO.12) and target
 
 # %% id="2tFphXYc4Kxo"
 NUM = 40
