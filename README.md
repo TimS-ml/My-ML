@@ -17,6 +17,8 @@ d88' d88'  88b`?88P'?8b     d88' d88'  88b  88b
 Most of them are based on web content
 A collection of code that I found useful or interesting
 
+![](./Pic/chain.png)
+
 
 # Useful Stuffs
 ## Open github notebook in colab
@@ -27,6 +29,9 @@ For example: https://colab.research.google.com/github/rasbt/deeplearning-models
 # Deep Leanring
 - https://github.com/hunkim/PyTorchZeroToAll
 - https://github.com/d2l-ai/d2l-zh
+- Deep Learning from Scratch Building with Python from First Principles
+- https://github.com/eriklindernoren/ML-From-Scratch
+- https://github.com/Atcold/pytorch-Deep-Learning
 
 
 # Machine Learning
