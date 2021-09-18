@@ -31,7 +31,10 @@ For example: https://colab.research.google.com/github/rasbt/deeplearning-models
 - https://github.com/d2l-ai/d2l-zh
 - Deep Learning from Scratch Building with Python from First Principles
 - https://github.com/eriklindernoren/ML-From-Scratch
+  - https://github.com/eriklindernoren/ML-From-Scratch/tree/master/mlfromscratch/deep_learning
 - https://github.com/Atcold/pytorch-Deep-Learning
+- https://github.com/geohot/tinygrad/blob/master/tinygrad/tensor.py
+- https://github.com/ddbourgin/numpy-ml
 
 
 # Machine Learning
