@@ -17,7 +17,15 @@ d88' d88'  88b`?88P'?8b     d88' d88'  88b  88b
 Most of them are based on web content
 A collection of code that I found useful or interesting
 
+Also check my another repo: https://github.com/TimS-ml/My-ML-From-Scratch
+
 ![](./Pic/chain.png)
+
+
+# TODO
+- [ ] Quick DL models using built-in dataset
+  - [ ] `torchvision.datasets` and `torchtext.datasets`
+- [ ] More topics
 
 
 # Useful Stuffs
