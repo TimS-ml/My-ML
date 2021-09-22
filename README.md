@@ -25,6 +25,8 @@ Also check my another repo: https://github.com/TimS-ml/My-ML-From-Scratch
 # TODO
 - [ ] Quick DL models using built-in dataset
   - [ ] `torchvision.datasets` and `torchtext.datasets`
+      - `ImageNet`, `coco`, `pascal voc2012`, `AG_News`
+  - [ ] Use small models if possible
 - [ ] More topics
 
 
