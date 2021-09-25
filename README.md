@@ -17,7 +17,12 @@ d88' d88'  88b`?88P'?8b     d88' d88'  88b  88b
 Most of them are based on web content
 A collection of code that I found useful or interesting
 
-Also check my another repo: https://github.com/TimS-ml/My-ML-From-Scratch
+Check my other repos: 
+- https://github.com/TimS-ml/Scratch-ML
+- https://github.com/TimS-ml/Scratch-DL
+- https://github.com/TimS-ml/My-ML
+- https://github.com/TimS-ml/My-Algo
+
 
 ![](./Pic/chain.png)
 
