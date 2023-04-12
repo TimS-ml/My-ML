@@ -1,0 +1,20 @@
+name: pDL
+channels:
+  - conda-forge
+  - pytorch
+  - dglteam
+dependencies:
+  - python=3.9
+  - pip
+  - matplotlib
+  - jupyter
+  - jupyterlab
+  - pytorch
+  - torchvision
+  - torchtext
+  - opencv
+  - librosa
+  - nb_conda_kernels
+  - dgl
+  - pip:
+    - torchviz
