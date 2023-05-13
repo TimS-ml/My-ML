@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # conda
 /notebooks/miniconda3/bin/conda init  && source ~/.bashrc
 
