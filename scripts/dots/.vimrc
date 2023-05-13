@@ -2,14 +2,12 @@
 set nocompatible
 
 " set showtabline =0
-" set termguicolors          " enable true colors support
+set termguicolors          " enable true colors support
 set t_Co=256
-set t_AB=^[[48;5;%dm
-set t_AF=^[[38;5;%dm
 set mouse=a
 set autoread               " set auto reload
 
-filetype plugin on         " vimwiki
+" filetype plugin on         " vimwiki
 " filetype plugin indent on  " no need for nvim Load plugins according to detected filetype.
 syntax on                  " Enable syntax highlighting.
 

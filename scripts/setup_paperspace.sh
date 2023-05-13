@@ -7,8 +7,8 @@ curl -Lk 'https://code.visualstudio.com/sha/download?build=stable&os=cli-alpine-
 wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
 
 # dot files
-wget https://go.momar.de/bashrc -O ~/.bashrc                                                    #
-wget https://github.com/TimS-ml/My-ML/scripts/dots/.vimrc ~/.vimrc
+wget https://go.momar.de/bashrc -O ~/.bashrc
+wget https://raw.githubusercontent.com/TimS-ml/My-ML/master/scripts/dots/.vimrc -O ~/.vimrc
 
 # fzf
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
