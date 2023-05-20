@@ -12,7 +12,7 @@ wget https://raw.githubusercontent.com/TimS-ml/My-ML/master/scripts/dots/.vimrc 
 
 # fzf
 git clone --depth 1 https://github.com/junegunn/fzf.git /notebooks/.fzf
-~/.fzf/install
+/notebooks/.fzf/install
 
 # apt
 # apt install ranger nvim tmux
