@@ -10,6 +10,7 @@ curl -Lk 'https://code.visualstudio.com/sha/download?build=stable&os=cli-alpine-
 # conda
 wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
 bash ./Miniconda3-latest-Linux-x86_64.sh -b -p /notebooks/miniconda3/
+source /notebooks/miniconda3/bin/activate
 
 # dot files
 wget https://raw.githubusercontent.com/TimS-ml/My-ML/master/scripts/dots/.bashrc -O ~/.bashrc
