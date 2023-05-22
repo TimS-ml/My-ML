@@ -2,7 +2,9 @@
 
 # dot files
 # wget https://go.momar.de/bashrc -O ~/.bashrc
-wget https://raw.githubusercontent.com/TimS-ml/My-ML/master/scripts/dots/.bashrc -O ~/.bashrc
+cp /notebooks/bashrc ~/.bashrc
+source ~/.bashrc
+# wget https://raw.githubusercontent.com/TimS-ml/My-ML/master/scripts/dots/.bashrc -O ~/.bashrc
 wget https://raw.githubusercontent.com/TimS-ml/My-ML/master/scripts/dots/.vimrc -O ~/.vimrc
 
 # conda
