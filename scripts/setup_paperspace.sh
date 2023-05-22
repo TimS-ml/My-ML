@@ -9,10 +9,10 @@ curl -Lk 'https://code.visualstudio.com/sha/download?build=stable&os=cli-alpine-
 
 # conda
 wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
-bash ./Miniconda3-latest-Linux-x86_64.sh -b -p /notebooks/miniconda
+bash ./Miniconda3-latest-Linux-x86_64.sh -b -p /notebooks/miniconda3/
 
 # dot files
-wget https://go.momar.de/bashrc -O ~/.bashrc
+wget https://raw.githubusercontent.com/TimS-ml/My-ML/master/scripts/dots/.bashrc -O ~/.bashrc
 wget https://raw.githubusercontent.com/TimS-ml/My-ML/master/scripts/dots/.vimrc -O ~/.vimrc
 
 # fzf
