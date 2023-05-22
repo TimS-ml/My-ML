@@ -22,5 +22,9 @@ wget https://raw.githubusercontent.com/TimS-ml/My-ML/master/scripts/dots/.vimrc 
 # apt
 # apt install ranger nvim tmux
 
+/notebooks/miniconda3/bin/conda init  && source ~/.bashrc
+
 cd /notebooks/FREED/scripts
 conda env create -f environment_freed.yml
+
+cp ~/.bashrc /notebooks/bashrc
