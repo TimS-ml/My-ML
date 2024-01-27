@@ -1,5 +1,11 @@
 import inspect
 
+# color patterns
+RED_PATTERN = '\033[31m%s\033[0m'
+GREEN_PATTERN = '\033[32m%s\033[0m'
+BLUE_PATTERN = '\033[34m%s\033[0m'
+PEP_PATTERN = '\033[36m%s\033[0m'
+BROWN_PATTERN = '\033[33m%s\033[0m'
 
 def print_methods(obj):
     # Split items based on their types
