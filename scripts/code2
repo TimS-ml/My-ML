@@ -1,0 +1,9 @@
+#!/bin/bash
+
+_fzf_compgen_path() {
+  fd --hidden --follow --exclude ".git" . "$1"
+}
+
+# selected_file=$(find . -type f | fzf --ansi)
+selected_file=$(fd --type f . | fzf --ansi)
+[[ -n $selected_file ]] && code "$selected_file"

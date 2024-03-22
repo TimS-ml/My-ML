@@ -2,7 +2,7 @@
 
 # dot files
 # wget https://raw.githubusercontent.com/TimS-ml/My-ML/master/scripts/dots/.bashrc -O ~/.bashrc
-wget https://raw.githubusercontent.com/TimS-ml/My-ML/master/scripts/dots/.vimrc -O ~/.vimrc
+# wget https://raw.githubusercontent.com/TimS-ml/My-ML/master/scripts/dots/.vimrc -O ~/.vimrc
 
 # fzf
 # git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
