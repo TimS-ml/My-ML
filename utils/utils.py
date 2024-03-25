@@ -1,4 +1,5 @@
 import inspect
+import pprint
 
 # color patterns
 RED_PATTERN = '\033[31m%s\033[0m'
