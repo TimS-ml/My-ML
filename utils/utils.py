@@ -6,6 +6,28 @@ GREEN_PATTERN = '\033[32m%s\033[0m'
 BLUE_PATTERN = '\033[34m%s\033[0m'
 PEP_PATTERN = '\033[36m%s\033[0m'
 BROWN_PATTERN = '\033[33m%s\033[0m'
+YELLOW_PATTERN = '\033[93m%s\033[0m'
+
+
+def print_debug_info(*args, **kwargs):
+    # Print information for positional arguments
+    for i, arg in enumerate(args):
+        print(f"Positional arg {i} {arg}: type={type(arg)}", end="")
+        if isinstance(arg, torch.Tensor):
+            print(f", dtype={arg.dtype}, device={arg.device}")
+        else:
+            print()
+    
+    # Print information for keyword arguments
+    for key, value in kwargs.items():
+        print(f"Keyword arg {key} {value}: type={type(value)}", end="")
+        if isinstance(value, torch.Tensor):
+            print(f", dtype={value.dtype}, device={value.device}")
+        elif hasattr(value, 'device'):  # For custom objects that might have a 'device' attribute
+            print(f", device={value.device}")
+        else:
+            print()
+
 
 def mprint(obj, magic_methods=True, private_methods=True, public_methods=True):
     # Split items based on their types
