@@ -20,6 +20,8 @@ A collection of code that I found useful or interesting
 
 
 # Useful Stuffs
+- https://github.com/TimS-ml/Boring-LLM-Implementation
+
 - Deep Learning from Scratch Building with Python from First Principles
 - https://github.com/eriklindernoren/ML-From-Scratch
   - https://github.com/eriklindernoren/ML-From-Scratch/tree/master/mlfromscratch/deep_learning
