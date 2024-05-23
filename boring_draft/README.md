@@ -4,7 +4,7 @@ Assume boring_utils installed
 Reference:
 - d2l book
 - d2l jax / pytorch colab notebook
-- uvadlc
+- uvadlc: https://uvadlc.github.io/
 
 What to do:
 - Self implement uvadlc course code

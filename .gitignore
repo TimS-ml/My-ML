@@ -1,9 +1,11 @@
 Quick*.*
 Temp*.*
 
-# Model
+# Model and Data Dir
 *.tar
 *.pt
+data/
+model/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
